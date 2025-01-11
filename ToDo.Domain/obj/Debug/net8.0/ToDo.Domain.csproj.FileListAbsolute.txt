@@ -1,0 +1,12 @@
+C:\Users\estev\OneDrive\Área de Trabalho\Projetos\ToDo\ToDo.Domain\bin\Debug\net8.0\ToDo.Domain.deps.json
+C:\Users\estev\OneDrive\Área de Trabalho\Projetos\ToDo\ToDo.Domain\bin\Debug\net8.0\ToDo.Domain.dll
+C:\Users\estev\OneDrive\Área de Trabalho\Projetos\ToDo\ToDo.Domain\bin\Debug\net8.0\ToDo.Domain.pdb
+C:\Users\estev\OneDrive\Área de Trabalho\Projetos\ToDo\ToDo.Domain\obj\Debug\net8.0\ToDo.Domain.csproj.AssemblyReference.cache
+C:\Users\estev\OneDrive\Área de Trabalho\Projetos\ToDo\ToDo.Domain\obj\Debug\net8.0\ToDo.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\estev\OneDrive\Área de Trabalho\Projetos\ToDo\ToDo.Domain\obj\Debug\net8.0\ToDo.Domain.AssemblyInfoInputs.cache
+C:\Users\estev\OneDrive\Área de Trabalho\Projetos\ToDo\ToDo.Domain\obj\Debug\net8.0\ToDo.Domain.AssemblyInfo.cs
+C:\Users\estev\OneDrive\Área de Trabalho\Projetos\ToDo\ToDo.Domain\obj\Debug\net8.0\ToDo.Domain.csproj.CoreCompileInputs.cache
+C:\Users\estev\OneDrive\Área de Trabalho\Projetos\ToDo\ToDo.Domain\obj\Debug\net8.0\ToDo.Domain.dll
+C:\Users\estev\OneDrive\Área de Trabalho\Projetos\ToDo\ToDo.Domain\obj\Debug\net8.0\refint\ToDo.Domain.dll
+C:\Users\estev\OneDrive\Área de Trabalho\Projetos\ToDo\ToDo.Domain\obj\Debug\net8.0\ToDo.Domain.pdb
+C:\Users\estev\OneDrive\Área de Trabalho\Projetos\ToDo\ToDo.Domain\obj\Debug\net8.0\ref\ToDo.Domain.dll
