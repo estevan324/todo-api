@@ -10,3 +10,5 @@ C:\Users\estev\OneDrive\Área de Trabalho\Projetos\ToDo\ToDo.Domain\obj\Debug\ne
 C:\Users\estev\OneDrive\Área de Trabalho\Projetos\ToDo\ToDo.Domain\obj\Debug\net8.0\refint\ToDo.Domain.dll
 C:\Users\estev\OneDrive\Área de Trabalho\Projetos\ToDo\ToDo.Domain\obj\Debug\net8.0\ToDo.Domain.pdb
 C:\Users\estev\OneDrive\Área de Trabalho\Projetos\ToDo\ToDo.Domain\obj\Debug\net8.0\ref\ToDo.Domain.dll
+C:\Users\estev\OneDrive\Área de Trabalho\Projetos\ToDo\ToDo.Domain\bin\Debug\net8.0\ToDo.Domain.runtimeconfig.json
+C:\Users\estev\OneDrive\Área de Trabalho\Projetos\ToDo\ToDo.Domain\obj\Debug\net8.0\ToDo.Domain.genruntimeconfig.cache
