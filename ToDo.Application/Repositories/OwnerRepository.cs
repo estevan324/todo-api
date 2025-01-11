@@ -8,44 +8,31 @@ using ToDo.Infrastructure.Repositories;
 
 namespace ToDo.Application.Repositories;
 
-public class OwnerRepository(ApplicationDbContext context, IMapper mapper) : IOwnerRepository
+public class OwnerRepository(ApplicationDbContext context) : IOwnerRepository
 {
-    private readonly ApplicationDbContext _context = context;
-    private readonly IMapper _mapper = mapper;
+    public async Task<IEnumerable<OwnerEntity>> GetAllAsync() 
+        => await context.Owners.ToListAsync();
 
-    public async Task<IEnumerable<OwnerDto>> GetAllAsync()
+
+    public async Task<OwnerEntity?> GetByIdAsync(Guid id) 
+        => await context.Owners.FindAsync(id);
+
+    public async Task SaveAsync(OwnerEntity owner)
     {
-        var owners = await _context.Owners.ToListAsync();
-
-        return _mapper.Map<IEnumerable<OwnerDto>>(owners);
-    }
-        
-
-    public async Task<OwnerDto?> GetByIdAsync(Guid id)
-    {
-        var owner = await _context.Owners.FindAsync(id);
-
-        return _mapper.Map<OwnerDto>(owner);
-    }
-
-    public async Task SaveAsync(OwnerDto owner)
-    {
-        var ownerEntity = _mapper.Map<OwnerEntity>(owner);
         if (owner.Id is null)
-            await _context.Owners.AddAsync(ownerEntity);
+            await context.Owners.AddAsync(owner);
         else
-            _context.Owners.Update(ownerEntity);
+            context.Owners.Update(owner);
 
-        await _context.SaveChangesAsync();
+        await context.SaveChangesAsync();
     }
 
     public async Task DeleteAsync(Guid id)
     {
         var owner = await GetByIdAsync(id);
         if (owner is not null)
-            _context.Owners.Remove(
-                _mapper.Map<OwnerEntity>(owner));
+            context.Owners.Remove(owner);
 
-        await _context.SaveChangesAsync();
+        await context.SaveChangesAsync();
     }
 }

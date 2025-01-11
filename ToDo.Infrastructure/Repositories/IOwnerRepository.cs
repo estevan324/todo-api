@@ -1,11 +1,12 @@
-﻿using ToDo.Domain.Models.Dtos;
+﻿using ToDo.Domain.Domain.Entities;
+using ToDo.Domain.Models.Dtos;
 
 namespace ToDo.Infrastructure.Repositories;
 
 public interface IOwnerRepository
 {
-    Task<IEnumerable<OwnerDto>> GetAllAsync();
-    Task<OwnerDto?> GetByIdAsync(Guid id);
-    Task SaveAsync(OwnerDto owner);
+    Task<IEnumerable<OwnerEntity>> GetAllAsync();
+    Task<OwnerEntity?> GetByIdAsync(Guid id);
+    Task SaveAsync(OwnerEntity owner);
     Task DeleteAsync(Guid id);
 }
