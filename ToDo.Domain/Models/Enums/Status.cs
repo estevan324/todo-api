@@ -1,4 +1,4 @@
-﻿namespace ToDo.Domain.Domain;
+﻿namespace ToDo.Domain.Domain.Enums;
 
 public enum Status
 {

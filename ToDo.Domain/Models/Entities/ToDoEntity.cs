@@ -1,4 +1,6 @@
-﻿namespace ToDo.Domain.Domain.Entities;
+﻿using ToDo.Domain.Domain.Enums;
+
+namespace ToDo.Domain.Domain.Entities;
 
 public class ToDoEntity : BaseEntity
 {
