@@ -1,6 +1,6 @@
 ﻿using ToDo.Domain.Domain.Enums;
 
-namespace ToDo.Domain.Domain.Entities;
+namespace ToDo.Domain.Models.Entities;
 
 public class ToDoEntity : BaseEntity
 {

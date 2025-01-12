@@ -1,4 +1,4 @@
-﻿namespace ToDo.Domain.Domain.Entities;
+﻿namespace ToDo.Domain.Models.Entities;
 
 public abstract class BaseEntity
 {

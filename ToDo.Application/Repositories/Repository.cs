@@ -9,7 +9,7 @@ public class Repository<TData>(ApplicationDbContext context) : IRepository<TData
     public async Task<IList<TData>> GetAllAsync() 
         => await context.Set<TData>().ToListAsync();
 
-    public async Task<TData?> GetByIdAsync(Guid id)
+    public async Task<TData?> GetByIdAsync(Guid? id)
         => await context.Set<TData>().FindAsync(id);
 
     public async Task SaveAsync(TData data)

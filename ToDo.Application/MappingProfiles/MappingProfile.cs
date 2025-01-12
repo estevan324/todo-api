@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using ToDo.Domain.Domain.Entities;
 using ToDo.Domain.Models.Dtos;
+using ToDo.Domain.Models.Entities;
 
 namespace ToDo.Application.MappingProfiles;
 
