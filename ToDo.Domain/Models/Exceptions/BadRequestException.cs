@@ -2,4 +2,4 @@
 
 namespace ToDo.Domain.Models.Exceptions;
 
-public class BadRequestException(string message) : BaseException(HttpStatusCode.BadRequest, message);
+public class BadRequestException(string message) : HttpStatusException(HttpStatusCode.BadRequest, message);

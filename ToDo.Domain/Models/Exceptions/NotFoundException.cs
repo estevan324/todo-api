@@ -2,4 +2,4 @@
 
 namespace ToDo.Domain.Models.Exceptions;
 
-public class NotFoundException(string message) : BaseException(HttpStatusCode.NotFound, message);
+public class NotFoundException(string message) : HttpStatusException(HttpStatusCode.NotFound, message);

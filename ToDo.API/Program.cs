@@ -1,6 +1,7 @@
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 using ToDo.API.Extensions;
+using ToDo.API.Middlewares;
 using ToDo.Application.Extensions;
 using ToDo.Application.MappingProfiles;
 using ToDo.Infrastructure.Data.Context;
@@ -33,6 +34,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<ErrorHandlingMiddleware>();
 
 app.UseHttpsRedirection();
 
