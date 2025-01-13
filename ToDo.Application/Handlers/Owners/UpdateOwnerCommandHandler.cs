@@ -1,9 +1,10 @@
 ﻿using MediatR;
 using ToDo.Application.Commands;
+using ToDo.Application.Commands.Owners;
 using ToDo.Application.Services.Interfaces;
 using ToDo.Domain.Models.Dtos;
 
-namespace ToDo.Application.Handlers;
+namespace ToDo.Application.Handlers.Owners;
 
 public class UpdateOwnerCommandHandler(IOwnerService ownerService) : IRequestHandler<UpdateOwnerCommand, OwnerDto>
 {

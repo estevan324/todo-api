@@ -1,6 +1,7 @@
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 using ToDo.API.Extensions;
+using ToDo.Application.Extensions;
 using ToDo.Application.MappingProfiles;
 using ToDo.Infrastructure.Data.Context;
 
@@ -11,6 +12,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
+builder.Services.AddApplicationServices();
 builder.Services.RegisterServices();
 
 builder.Services.AddControllers()

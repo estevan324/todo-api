@@ -1,5 +1,4 @@
-﻿using ToDo.Application.Handlers;
-using ToDo.Application.Repositories;
+﻿using ToDo.Application.Repositories;
 using ToDo.Application.Services;
 using ToDo.Application.Services.Interfaces;
 using ToDo.Infrastructure.Repositories;
@@ -13,14 +12,7 @@ public static class DependencyInjection
         services.AddScoped<IOwnerService, OwnerService> ();
         services.AddScoped<IToDoService, ToDoService>();
         services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-
-        services.AddMediatR(config =>
-        {
-            config.RegisterServicesFromAssemblies(
-                typeof(CreateOwnerCommandHandler).Assembly,
-                typeof(UpdateOwnerCommandHandler).Assembly);
-        });
-
+        
         return services;
     }
 }
