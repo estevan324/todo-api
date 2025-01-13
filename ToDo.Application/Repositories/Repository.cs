@@ -12,14 +12,27 @@ public class Repository<TData>(ApplicationDbContext context) : IRepository<TData
     public async Task<TData?> GetByIdAsync(Guid? id)
         => await context.Set<TData>().FindAsync(id);
 
-    public async Task SaveAsync(TData data)
+    public async Task<TData> SaveAsync(TData data)
     {
-        if (context.Entry(data).State is EntityState.Detached)
-            await context.Set<TData>().AddAsync(data);
+        var entry = context.Entry(data);
+
+        if (entry.State == EntityState.Detached)
+        {
+            var entity = await context.Set<TData>().FindAsync(entry.Property("Id").CurrentValue);
+
+            if (entity != null)
+            {
+                context.Entry(entity).State = EntityState.Detached;
+                context.Set<TData>().Update(data);
+            }
+            else
+                await context.Set<TData>().AddAsync(data);
+        }
         else
             context.Set<TData>().Update(data);
 
         await context.SaveChangesAsync();
+        return data;
     }
 
     public async Task DeleteAsync(Guid id)

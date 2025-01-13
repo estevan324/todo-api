@@ -6,6 +6,6 @@ public interface IRepository<T>
 {
     Task<IList<T>> GetAllAsync();
     Task<T?> GetByIdAsync(Guid? id);
-    Task SaveAsync(T data);
+    Task<T> SaveAsync(T data);
     Task DeleteAsync(Guid id);    
 }

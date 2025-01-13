@@ -29,10 +29,12 @@ public class OwnerService(IRepository<OwnerEntity> repository, IMapper mapper) :
         return mapper.Map<OwnerDto>(owner);
     }
 
-    public async Task AddAsync(OwnerDto owner)
+    public async Task<OwnerDto> AddAsync(OwnerDto owner)
     {
-        await repository.SaveAsync(
+        var data = await repository.SaveAsync(
             mapper.Map<OwnerEntity>(owner));
+
+        return mapper.Map<OwnerDto>(data);
     }
 
     public async Task UpdateAsync(OwnerDto owner)

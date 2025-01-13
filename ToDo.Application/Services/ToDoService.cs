@@ -29,10 +29,12 @@ public class ToDoService(IRepository<ToDoEntity> repository, IMapper mapper) : I
         return mapper.Map<ToDoDto>(toDo);
     }
 
-    public async Task AddAsync(ToDoDto todo)
+    public async Task<ToDoDto> AddAsync(ToDoDto todo)
     {
-        await repository.SaveAsync(
+        var data = await repository.SaveAsync(
             mapper.Map<ToDoEntity>(todo));
+
+        return mapper.Map<ToDoDto>(data);
     }
 
     public async Task UpdateAsync(ToDoDto todo)
